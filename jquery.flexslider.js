@@ -261,14 +261,12 @@
           methods.controlNav.active();
 
           slider.controlNav.bind(eventType, function(event) {
-            event.preventDefault();            	
-            console.log(event.type);
-            console.log(watchedEvent);
-            console.log(event.target);
+            event.preventDefault();
+		
+		// REVISION: FOLLOW PAGER LINK	
+		window.location = $(event.target).attr("href");
 			
-			window.location = $(event.target).attr("href");
-			
-			/* 
+	    /* ORIGINAL FUNCTIONALITY OF PAGER
             if (watchedEvent === "" || watchedEvent === event.type) {
               var $this = $(this),
                   target = slider.controlNav.index($this);
