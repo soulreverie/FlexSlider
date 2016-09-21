@@ -261,8 +261,14 @@
           methods.controlNav.active();
 
           slider.controlNav.bind(eventType, function(event) {
-            event.preventDefault();
-
+            event.preventDefault();            	
+            console.log(event.type);
+            console.log(watchedEvent);
+            console.log(event.target);
+			
+			window.location = $(event.target).attr("href");
+			
+			/* 
             if (watchedEvent === "" || watchedEvent === event.type) {
               var $this = $(this),
                   target = slider.controlNav.index($this);
@@ -278,6 +284,7 @@
               watchedEvent = event.type;
             }
             methods.setToClearWatchedEvent();
+            */
           });
         },
         set: function() {
