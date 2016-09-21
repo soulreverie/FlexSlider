@@ -260,7 +260,7 @@
           slider.controlNav = slider.manualControls;
           methods.controlNav.active();
 
-          slider.controlNav.bind(eventType, function(event) {
+          slider.controlNav.bind('click', function(event) {
             event.preventDefault();
 		
 		// REVISION: FOLLOW PAGER LINK	
